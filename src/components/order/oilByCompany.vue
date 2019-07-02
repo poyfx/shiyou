@@ -3,8 +3,7 @@
     <headers :title="title"></headers>
     <mt-search v-model="value"></mt-search>
     <div class="home">
-    
-        <div class="company" @click="chooseCompany(item.id,item.name,item.address)" v-for="item in datas" :key="item.id">
+        <div class="companys" @click="chooseCompany(item.id,item.name,item.address)" v-for="item in datas" :key="item.id">
         <p>{{item.id}}</p>
         <p>{{item.name}}</p>
         <p>{{item.address}}</p>
@@ -86,7 +85,7 @@ export default {
 .mint-search {
   height: 100%;
 }
-.company {
+.companys {
   background-color: #fff;
   padding: 10px 0 20px 15px;
   border-bottom: 1px solid #d6d6d6;
