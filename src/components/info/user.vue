@@ -55,7 +55,7 @@
         </mt-field>
       </div>
       <div class="fget-num out bgcf">
-          <mt-field label="申请权限" readonly @touchstart.native="apply">
+          <mt-field label="申请权限" readonly @click.native="apply">
           <img src="@/assets/img/right.png" alt>
         </mt-field>
 
@@ -67,7 +67,7 @@
           <img src="@/assets/img/right.png" alt>
         </mt-field>
 
-        <mt-button class="btn" @click="outsafe">安全退出</mt-button>
+        <mt-button class="btn" @click.native="outsafe">安全退出</mt-button>
       </div>
     </div>
     <div class="footer">

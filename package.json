@@ -2,7 +2,7 @@
   "name": "ahsy",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "",
+  "author": "pi",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -21,6 +21,7 @@
     "mint-ui": "^2.2.13",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vue-verify-plugin": "^2.0.8",
     "vuex": "^3.1.1"
   },
   "devDependencies": {
@@ -79,5 +80,18 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".postcssrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poyfx/shiyou.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poyfx/shiyou/issues"
+  },
+  "homepage": "https://github.com/poyfx/shiyou#readme"
 }
