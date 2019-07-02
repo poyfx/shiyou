@@ -1,0 +1,66 @@
+html,
+body {
+  background-color: #fff ;
+  padding: 0 7px;
+}
+.mt81{
+    margin: 81px auto 44px;
+    text-align: center
+}
+.p-img{
+    margin-bottom: 17px;
+}
+.p-font span{
+    font-size: 22px
+}
+.input-box{
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 0 19px;
+}
+
+.input-box .info{
+    margin: 7px auto 0;
+    position: relative;
+    height: 47px;
+}
+.info .forgetPwd{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+.info .reginsterNew{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+.input-box p .btn{
+    width: 334px;
+    height: 47px;
+    background-color: #00A8FF;
+    color: #fff;
+    font-size: 19px;
+    border-radius: 5px;
+}
+/* start页面 */
+.mt300{
+    margin-top: 106px;
+}
+.p-bx{
+    margin:  228px auto 0;
+    text-align: center
+}
+.p-size{
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+  .username .mint-cell-wrapper {
+    border: 1px solid #e5e5e5;
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+  }
+  .password .mint-cell-wrapper {
+    border: 1px solid #e5e5e5;
+    border-radius:0 0 4px 4px ;
+}

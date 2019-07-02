@@ -1,0 +1,113 @@
+/*
+ * @Author: mikey.pi 
+ * @Date: 2019-06-14 16:37:11 
+ * @Last Modified by: mikey.pi
+ * @Last Modified time: 2019-07-01 10:33:13
+ */
+ 
+html,body{
+    margin:0;
+    padding: 0;
+    font-size: 15px;
+    background-color: #EFEFF4;
+    font-family: '微软雅黑';
+}
+input{
+    font-size: 15px; 
+}
+ html,body,input,img,a,p,div{
+  
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+} 
+.mhome,.home,.titleAll,.footer{
+    padding: 0;
+
+    margin: 0 auto;
+}
+.viewport{
+    padding:0 20px;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;    
+}
+div,p,ul,li,ol,dl,dt,dd,span,img,input,table,h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    list-style-type:none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: normal;
+}
+/* i,em{
+    font-style:normal;
+} */
+.ce{
+    margin:0 auto;
+    text-align: center;
+}
+/* .db{
+    display: block;
+}
+.dn{
+    display: none;
+}
+.dbn{
+    display: inline-block;
+} */
+a,a:hover{
+    text-decoration: none;
+    color:#009DFF;
+}
+input, button, select, textarea {
+    outline: none;
+    /* -webkit-appearance: none; */
+    border-radius: 0;
+    margin: 0;
+    border: none;
+   
+    }
+.clearfix::after,.clearfix::before{
+    display: block;
+    clear: both;    
+    content: '';
+    visibility: hidden;
+    height: 0;
+}
+.line{
+    display: inline-block;
+    width: 4px;
+    height: 22px;
+    background-color: #00A8FF;
+}
+.mint-button--large{
+    /* width: 334px; */
+    margin:  0 auto;
+}
+/* 背景圆角 */
+.bgcf{
+    background-color: #fff;
+    border-radius: 8px
+}
+/* 下划线 */
+.underline {
+    border-bottom: 1px solid #e5e5e5;
+}
+span{
+    font-size: 14px;
+}
+.mint-cell-text{
+    color: #666666;
+}
+.mint-field-core{
+    font-size: 14px
+}
+html{
+    padding:44px 0 0px;
+ }
+ input::-webkit-input-placeholdert{
+     color: #b2b2b2
+ }
