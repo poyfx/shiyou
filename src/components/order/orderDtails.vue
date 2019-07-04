@@ -4,7 +4,7 @@
     <div class="home">
       <div class="fget-num detailsState">
         <div class="timeOut">
-          <timer  endTime="1728000000" :callback="callback" endText="已经结束了"></timer>
+          <timer  endTime="172800" :callback="callback" endText="已经结束了"></timer>
           <!-- <span class="time">00:00:00</span>1562126113.395 -->
           <span class="timeOver">订单自动取消</span>
         </div>

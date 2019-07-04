@@ -3,10 +3,10 @@
     <headers :title="title" :home="home"></headers>
     <div class="home">
     <div class="step-box">
-        <span ref="one" class="step-active">第一步</span>
-        <span ref="two" class>第二步</span>
-        <span ref="three" class>第三步</span>
-        <span ref="four" class>第四步</span>
+        <span ref="one" :class="{ stepAgo,stepActive}">第一步</span>
+        <span ref="two" :class="{ stepActive:twoTep ,stepAgo:twoTepAgo }">第二步</span>
+        <span ref="three" :class="{stepActive:threeTep ,stepAgo:fourTep }">第三步</span>
+        <span ref="four" :class="{ stepActive:fourTep}">第四步</span>
       </div>
       <div class="fget-num">
         <div class="fget-ul">
@@ -91,6 +91,9 @@ export default {
       twoTep:false,
       threeTep:false,
       fourTep:false,
+      stepAgo:false,
+      stepActive:true,
+      twoTepAgo:false
     };
   },
   methods: {
@@ -120,35 +123,37 @@ export default {
             filter: "image"
           });
     },
-    handSuccess(response, file, fileList) {
-      console.log(file);
-      this.src = URL.createObjectURL(file.raw);
-      this.fileList.name = file.name;
-      this.fileList.url = file.raw;
-      console.log(this.fileList);
-    },
-    handleRemove(file, fileList) {
-      console.log(file, fileList);
-    },
-    handlePreview(file) {
-      console.log(file);
-    },
-    handleChange(file, fileList) {
-      console.log(file, fileList);
-    },
+    // handSuccess(response, file, fileList) {
+    //   console.log(file);
+    //   this.src = URL.createObjectURL(file.raw);
+    //   this.fileList.name = file.name;
+    //   this.fileList.url = file.raw;
+    //   console.log(this.fileList);
+    // },
+    // handleRemove(file, fileList) {
+    //   console.log(file, fileList);
+    // },
+    // handlePreview(file) {
+    //   console.log(file);
+    // },
+    // handleChange(file, fileList) {
+    //   console.log(file, fileList);
+    // },
     toOneTep() {
        this.src = two,
-      localStorage.phoneto = this.fileList;
+        localStorage.phoneto = this.fileList;
         this.oneTep = false;
         this.twoTep = true;
         this.num = 1; 
+        this.stepAgo = true
     },
       toTwoTep() {
       this.src = three,
       localStorage.phoneto = this.fileList;
         this.twoTep = false; 
         this.threeTep = true;
-        this.num = 2
+        this.num = 2,
+        this.twoTepAgo = true
     },
       toThreeTep() {
          this.src = four,
@@ -202,5 +207,11 @@ export default {
 }
 .upload .el-upload-list {
   display: none;
+}
+.step-box .stepActive {
+  background-color: #00a8ff;
+}
+.step-box .stepAgo {
+  background: #7eeab8;
 }
 </style>

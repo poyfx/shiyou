@@ -24,7 +24,7 @@ export default {
   name: "OilByCompany",
   data() {
     return {
-      title: "选择购油单位",
+      title: "选择公司",
       value: "",
       datas: [
         {
@@ -61,12 +61,16 @@ export default {
       url:''
     };
   },
+  created(){
+    this.getRouter()
+  },
   methods: {
-    getrouter(){
-      this.$toute.query.url
+    getRouter(){
+     this.url = this.$route.query.name
+     console.log(this.url)
     },
     chooseCompany(id,name,address){
-      this.$router.push({path:'/register',query:{
+      this.$router.push({path:this.url,query:{
         ids:id,
         names:name,
         addresss:address

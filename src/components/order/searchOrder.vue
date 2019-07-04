@@ -21,7 +21,7 @@
       year-format="{value} 年"
       month-format="{value} 月"
       date-format="{value} 日"
-     
+     :startDate="stateDate"
       @confirm="handleConfirm"
     ></mt-datetime-picker>
   </div>
@@ -40,7 +40,8 @@ export default {
       home:"home",
       day: "",
       pickerVisible: "",
-      date: ""
+      date: "",
+      stateDate:new Date()
     };
   },
   mounted() {

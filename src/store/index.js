@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import  user from './module/user'
 Vue.use(Vuex)
 
-const store = new Vuex ({
+ const store = new Vuex.Store ({
     state:{},
     getters:{},
     mutations:{},
@@ -11,5 +11,5 @@ const store = new Vuex ({
     modules:{
         user
     }
-})
-export default store
+});
+export default store;

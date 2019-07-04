@@ -4,7 +4,7 @@
     <div class="home">
       <div class="fget-num">
         <mt-field
-          label="购油单位"
+          label="购油公司"
           placeholder="XXXXXXXXXX公司"
           @click.native="GoOilByCompany"
           readonly
@@ -110,7 +110,9 @@ export default {
   },
   methods: {
     GoOilByCompany() {
-      this.$router.push("/oilByCompany");
+      this.$router.push({path:"/oilByCompany",query:{
+        name:"/order"
+      }});
     },
     chooseOilShow() {
       this.show = !this.show;

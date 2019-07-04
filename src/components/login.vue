@@ -48,7 +48,7 @@
 
 <script>
 // import axios from "axios";
-import { Login } from "./api/api";
+import { Login } from "./api/login";
 import { Toast } from "mint-ui";
 import "@/assets/css/login.css";
 import crypto from "crypto";
@@ -87,18 +87,28 @@ export default {
                   console.log(password)
           Login(this.username, password)
             .then(res => {
-              res.data.data.forEach(element => {
-                console.log(element);
-                if (
-                  this.username == element.name &&
-                  this.password == element.password
-                ) {
+              if(res.status == "200" ){
+                res.data.data.forEach(element => {
+                  console.log(element)
+                 this.$router.push({path:"/home",query:{data:element}});
+                });
+              
+               
+              }else{
+                return Toast("账号或密码错误");
+              }
+              // res.data.data.forEach(element => {
+              //   console.log(element);
+              //   if (
+              //     this.username == element.name &&
+              //     this.password == element.password
+              //   ) {
                 
-                   this.$router.push({path:"/home",name:'home',query:{data:element}});
-                } else {
-                  return Toast("账号或密码错误");
-                }
-              });
+                   
+              //   } else {
+              //     return Toast("账号或密码错误");
+              //   }
+              // });
             })
             .catch(err => {
               return err;

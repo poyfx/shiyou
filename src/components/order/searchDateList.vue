@@ -18,6 +18,7 @@
       <div class="times">{{day}}</div>
       <el-select v-model="value" size="mini" style="width:120px;left:32%" placeholder="预约单状态">
         <el-option
+        
           v-for="item in options"
           :label="item.label"
           :value="item.value"

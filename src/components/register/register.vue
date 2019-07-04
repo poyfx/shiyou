@@ -236,7 +236,9 @@ export default {
       }
     },
     GoOilByCompany() {
-      this.$router.push("/oilByCompany");
+      this.$router.push({path:"/oilByCompany",query:{
+        name:"/register"
+      }});
     },
     chooseOne(val) {
       this.mode = !this.mode;

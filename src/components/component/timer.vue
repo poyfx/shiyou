@@ -36,8 +36,8 @@
             let timer = setInterval(function(){
                 let nowTime = new Date(); 
                 let endTime = new Date(timestamp * 1000);
-                let t = endTime.getTime()- nowTime.getTime();
-                  console.log(t,endTime.getTime(),nowTime.getTime())
+                let t = endTime.getTime();
+                  console.log(t,endTime.getTime())
                 if(t>0){
                     let day = Math.floor(t/86400000);
                     let hour=Math.floor((t/3600000)%24);
@@ -56,10 +56,9 @@
                     if(day <= 0 && hour <= 0){
                        format =`${min}分${sec}秒`;
                     }
-                    // --timestamp;
+                     --timestamp;
                     self.content = format;
                  
-                    clearInterval(timer);
                     }else{
                       clearInterval(timer);
                       self.content = self.endText;
